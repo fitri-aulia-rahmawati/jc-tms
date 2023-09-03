@@ -11,7 +11,7 @@ import org.testng.Assert;
 public class LoginTest {
     static WebDriver driver;
     static ExtentTest extentTest;
-    static LoginPage loginPage;
+    static LoginPage loginPage = new LoginPage();
 
     public LoginTest(){
         driver = Hooks.driver;

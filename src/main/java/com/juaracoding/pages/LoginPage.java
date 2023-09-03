@@ -17,7 +17,7 @@ public class LoginPage {
     @FindBy(className = "brand")
     WebElement getTxtLogin;
 
-    @FindBy(id = "container")
+    @FindBy(xpath = "//h1[normalize-space()='404 Page Not Found']")
     WebElement getTxtInvalidLogin;
 
     public String getTxtErrorLogin(){
