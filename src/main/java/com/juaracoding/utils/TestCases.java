@@ -1,15 +1,105 @@
 package com.juaracoding.utils;
 
 public enum TestCases {
-    T1("Login Valid Test");
+    T1("Valid Login Test"),
+    T2("Absen Masuk Test"),
+    T3("Just Upload txt file"),
+    T4("Absen Masuk Without Any Input"),
+    T5("Absen Masuk Just Upload Selfie Photo"),
+    T6("Absen Masuk Just Input Nama Shift"),
+    T7("Absen Masuk just Choose WFH In Tipe Absen"),
+    T8("Absen Masuk Just Choose WFO In Tipe Absen"),
+    T9("Absen Masuk Just Upload Selfie Photo And Input Nama Shift"),
+    T10("Absen Masuk Just Upload Selfie Photo And Choose WFH In Tipe Absen"),
+    T11("Absen Masuk Just Upload Selfie And Choose WFO in Tipe Absen"),
+    T12("Absen Masuk Just Input Nama Shift And Choose WFH in Tipe Absen"),
+    T13("Absen Masuk Just Input Nama Shift And Choose WFO in Tipe Absen"),
+    T14("Valid Absen Masuk WFH"),
+    T15("Valid Absen Masuk WFO"),
+    T16("Valid Absen upload file 8mb"),
+    T17("Absen Pulang Test"),
+    T18("Absen Pulang Without Any Input"),
+    T19("Absen Pulang Just Upload Selfie Photo"),
+    T20("Absen Pulang Just Input Nama Shift"),
+    T21("Absen Pulang just Choose WFH In Tipe Absen"),
+    T22("Absen Pulang Just Choose WFO In Tipe Absen"),
+    T23("Absen Pulang Just Upload Selfie Photo And Input Nama Shift"),
+    T24("Absen Pulang Just Upload Selfie Photo And Choose WFH In Tipe Absen"),
+    T25("Absen Pulang Just Upload Selfie And Choose WFO in Tipe Absen"),
+    T26("Absen Pulang Just Input Nama Shift And Choose WFH in Tipe Absen"),
+    T27("Absen Pulang Just Input Nama Shift And Choose WFO in Tipe Absen"),
+    T28("Valid Absen Pulang WFH"),
+    T29("Valid Absen Pulang WFO"),
+    T30("Absen Izin Test"),
+    T31("Absen Izin Without Any Input"),
+    T32("Absen Izin Just Upload Selfie Photo"),
+    T33("Absen Izin Just Input Nama Shift"),
+    T34("Absen Izin just Choose WFH In Tipe Absen"),
+    T35("Absen Izin Just Choose WFO In Tipe Absen"),
+    T36("Absen Izin Just Upload Selfie Photo And Input Nama Shift"),
+    T37("Absen Izin Just Upload Selfie Photo And Choose WFH In Tipe Absen"),
+    T38("Absen Izin Just Upload Selfie And Choose WFO in Tipe Absen"),
+    T39("Absen Izin Just Input Nama Shift And Choose WFH in Tipe Absen"),
+    T40("Absen Izin Just Input Nama Shift And Choose WFO in Tipe Absen"),
+    T41("Absen Sakit Test"),
+    T42("Absen Sakit Without Any Input"),
+    T43("Absen Sakit Just Upload Selfie Photo"),
+    T44("Absen Sakit Just Input Nama Shift"),
+    T45("Absen Sakit just Choose WFH In Tipe Absen"),
+    T46("Absen Sakit Just Choose WFO In Tipe Absen"),
+    T47("Absen Sakit Just Upload Selfie Photo And Input Nama Shift"),
+    T48("Absen Sakit Just Upload Selfie Photo And Choose WFH In Tipe Absen"),
+    T49("Absen Sakit Just Upload Selfie And Choose WFO in Tipe Absen"),
+    T50("Absen Sakit Just Input Nama Shift And Choose WFH in Tipe Absen"),
+    T51("Absen Sakit Just Input Nama Shift And Choose WFO in Tipe Absen"),
+    T52("Absen Off Test"),
+    T53("Absen Off Without Any Input"),
+    T54("Absen Off Just Upload Selfie Photo"),
+    T55("Absen Off Just Input Nama Shift"),
+    T56("Absen Off just Choose WFH In Tipe Absen"),
+    T57("Absen Off Just Choose WFO In Tipe Absen"),
+    T58("Absen Off Just Upload Selfie Photo And Input Nama Shift"),
+    T59("Absen Off Just Upload Selfie Photo And Choose WFH In Tipe Absen"),
+    T60("Absen Off Just Upload Selfie And Choose WFO in Tipe Absen"),
+    T61("Absen Off Just Input Nama Shift And Choose WFH in Tipe Absen"),
+    T62("Absen Off Just Input Nama Shift And Choose WFO in Tipe Absen"),
+    T63("Valid Absen Izin Absen WFH"),
+//    T64("Valid Absen Izin Absen WFO"),
+    T65("Valid Absen Sakit Absen WFH"),
+//    T66("Valid Absen Sakit Absen WFO"),
+    T67("Valid Absen Sakit Absen WFH"),
+//    T68("Valid Absen Sakit Absen WFO"),
+
+    T69("Valid Login Test 1"),
+    T70("Open Absen Masuk After Valid Absen Izin"),
+    T71("Open Absen Pulang After Valid Absen Izin"),
+    T72("Open Absen Izin After Valid Absen Izin"),
+    T73("Open Absen Sakit After Valid Absen Izin"),
+    T74("Open Absen Off After Valid Absen Izin"),
+    T75("Valid Login Test 2"),
+    T76("Open Absen Masuk After Valid Absen Sakit"),
+    T77("Open Absen Pulang After Valid Absen Sakit"),
+    T78("Open Absen Izin After Valid Absen Sakit"),
+    T79("Open Absen Sakit After Valid Absen Sakit"),
+    T80("Open Absen Off After Valid Absen Sakit"),
+    T81("Valid Login Test 3"),
+    T82("Open Absen Masuk After Valid Absen Off"),
+    T83("Open Absen Pulang After Valid Absen Off"),
+    T84("Open Absen Izin After Valid Absen Off"),
+    T85("Open Absen Sakit After Valid Absen Off"),
+    T86("Open Absen Off After Valid Absen Off");
+
+
 
     private String testCaseName;
 
-    TestCases(String value){
+    TestCases(String value) {
         testCaseName = value;
     }
 
     public String getTestCaseName() {
         return testCaseName;
+
+
     }
-}
+    }

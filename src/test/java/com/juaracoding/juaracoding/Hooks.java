@@ -1,17 +1,17 @@
-package com.juaracoding;
+package com.juaracoding.juaracoding;
 
 import com.juaracoding.drivers.DriverSingleton;
 import com.juaracoding.utils.TestCases;
 import com.juaracoding.utils.Utils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
+import com.relevantcodes.extentreports.LogStatus;
+import io.cucumber.java.*;
 import org.openqa.selenium.WebDriver;
 
-public class Hooks {
+import java.io.IOException;
 
+public class Hooks {
     static WebDriver driver;
     static ExtentTest extentTest;
     static ExtentReports reports = new ExtentReports("target/extent-report.html");
@@ -21,14 +21,21 @@ public class Hooks {
         DriverSingleton.getInstance("chrome");
         driver = DriverSingleton.getDriver();
         TestCases[] test = TestCases.values();
-        extentTest = reports.startTest(test[Utils.testCount].getTestCaseName());
-        Utils.testCount++;
+    extentTest = reports.startTest(test[Utils.tesCount].getTestCaseName());
+    Utils.tesCount++;
     }
 
-//    @AfterStep
-//    public void getResultStatus(){
-//
-//    }
+    @AfterStep
+    public void getResultStatus(Scenario scenario) throws IOException {
+        if(scenario.isFailed()){
+            String screenshotPath = Utils.getScreenshot(driver, scenario.getName().replace(" ","_"));
+            extentTest.log(LogStatus.FAIL, scenario.getName()+"\n"
+                    +extentTest.addScreenCapture(screenshotPath));
+            extentTest.log(LogStatus.PASS,scenario.getName()+"\n"
+                    +extentTest.addScreenCapture((screenshotPath)));
+        }
+    }
+
 
     @After
     public void endTestCase(){
@@ -37,9 +44,13 @@ public class Hooks {
     }
 
     @AfterAll
-    public static void finsih(){
+    public static void finish(){
         DriverSingleton.delay(3);
         DriverSingleton.closeObjectInstance();
     }
-
 }
+
+
+
+
+
