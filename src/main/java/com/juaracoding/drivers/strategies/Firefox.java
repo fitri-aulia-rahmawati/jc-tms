@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Firefox implements DriverStrategy {
     @Override
     public WebDriver setStrategy() {
-        String path = "D:\\SMK\\Juara Coding\\geckodriver.exe";
+        String path = "D:\\MyTools\\geckodriver.exe";
         System.setProperty("webdriver.gecko.driver",path);
         WebDriver driver = new FirefoxDriver();
         return driver;

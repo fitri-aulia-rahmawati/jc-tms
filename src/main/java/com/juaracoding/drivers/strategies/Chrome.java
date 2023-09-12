@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Chrome implements DriverStrategy {
     @Override
     public WebDriver setStrategy() {
-        String path = "D:\\SMK\\Juara Coding\\chromedriver.exe";
+        String path = "C:\\myTools\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",path);
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("useAutomationExtension",false);
