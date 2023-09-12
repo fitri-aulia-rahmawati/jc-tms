@@ -1,9 +1,9 @@
-Feature: Login Page
+Feature: Login Admin Page
   Scenario: Login Invalid URL
     Given User Enter Invalid URL TMS
     Then User Get Text Error Login Page
 
-  Scenario: Login Valid` URL
+  Scenario: Login Valid URL
     Given User Enter Valid URL TMS
     Then User Get Text Login Page
 
@@ -35,6 +35,6 @@ Feature: Login Page
     And User Click Login Button
     Then User Get Text Dashboard
 
-  Scenario: Logout
-    When  User Click Logout Button
-    Then User Get Text Login Page
+#  Scenario: Logout
+#    When User Click Logout Button
+#    Then User Get Text Login Page

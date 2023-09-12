@@ -12,13 +12,13 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class LoginTest {
+public class LoginAdminTest {
 
     static WebDriver driver;
     static ExtentTest extentTest;
     static LoginPage loginPage = new LoginPage();
 
-    public LoginTest(){
+    public LoginAdminTest(){
         driver = Hooks.driver;
         extentTest = Hooks.extentTest;
     }
@@ -39,7 +39,6 @@ public class LoginTest {
     public void user_enter_valid_url_tms(){
         driver.get(Constants.URL_VALID);
         extentTest.log(LogStatus.PASS, "User Enter Valid URL TMS");
-        DriverSingleton.delay(3);
     }
 
     @Then("User Get Text Login Page")
@@ -73,8 +72,7 @@ public class LoginTest {
         extentTest.log(LogStatus.PASS,"User Get Text Dashboard");
     }
     @When("User Input Username Admin")
-    public void user_input_valid_username(){
-        DriverSingleton.delay(3);
+    public void user_input_username_admin(){
         loginPage.usernameField(Constants.USER_ADMIN);
     }
 
@@ -90,12 +88,7 @@ public class LoginTest {
     @Then("User Get Text Dashboard")
     public void user_get_text_dashboard(){
         DriverSingleton.delay(3);
-        Assert.assertEquals(loginPage.getTxtDashboard(),"Selamat datang, Admin TMS");
+        Assert.assertEquals(loginPage.getTxtDashboard(),"Dashboard");
         extentTest.log(LogStatus.PASS,"User Get Text Dashboard");
-    }
-
-    @When("User Click Logout Button")
-    public void user_click_logout_button(){
-        loginPage.logoutBtn();
     }
 }

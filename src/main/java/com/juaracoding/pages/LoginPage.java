@@ -34,8 +34,9 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='alert alert-danger alert-dismissable']")
     WebElement txtInvalidLogin;
 
-    @FindBy(xpath = "//div[@class='panel-heading']")
+    @FindBy(xpath = "//h1[normalize-space()='Dashboard']")
     WebElement txtDashboard;
+
     @FindBy(xpath = "//span[normalize-space()='Logout']")
     WebElement btnLogout;
 
@@ -61,10 +62,6 @@ public class LoginPage {
     public void loginBtn(){
         btnLogin.click();
     }
-    public void logoutBtn(){
-        btnLogout.click();
-    }
-
     public String getTxtErrorLogin(){
         return getTxtInvalidUrl.getText();
     }
@@ -79,5 +76,9 @@ public class LoginPage {
 
     public String getTxtDashboard(){
         return txtDashboard.getText();
+    }
+
+    public void logoutBtn(){
+        btnLogout.click();
     }
 }

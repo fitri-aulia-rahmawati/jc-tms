@@ -86,4 +86,8 @@ public class ReportAbsenOffPage {
     public void alertClick(){
         driver.switchTo().alert().accept();
     }
+
+    public String alerMonth(){return driver.switchTo().alert().getText();}
+    public void alertMonthClick(){driver.switchTo().alert().accept();}
+
 }
