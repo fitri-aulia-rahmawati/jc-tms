@@ -24,7 +24,7 @@ public class ManagemenDivisi {
 //  Scenario: Menambahkan data baru pada management divisi======================================
     @FindBy(xpath = "//div[contains(text(),'-- Pilih Divisi --')]")
     WebElement klikNamaDivisi;
-    @FindBy(xpath = "//span[normalize-space()='netflix']")
+    @FindBy(xpath = "//span[normalize-space()='kabarin aja']")
     WebElement namaDivisi;
     @FindBy(xpath = "//button[@data-id='tipe']//div[@class='filter-option-inner-inner'][normalize-space()='-- Pilih --']")
     WebElement klikTipeDivisi;
@@ -49,7 +49,7 @@ public class ManagemenDivisi {
     WebElement btnChooseFile;
     @FindBy(xpath = "//button[@data-id='divisi']//div[@class='filter-option-inner-inner'][normalize-space()='-- Pilih --']")
     WebElement klikDivisiUpload;
-    @FindBy(xpath = "//div[@aria-expanded='true']//span[@class='text'][normalize-space()='sarange']")
+    @FindBy(xpath = "//div[@aria-expanded='true']//span[@class='text'][normalize-space()='EHS']")
     WebElement pilihDivisiUpload;
     @FindBy(xpath = "//*[@id=\"content\"]/div[1]/strong")
     WebElement txtBerhasilUpload;

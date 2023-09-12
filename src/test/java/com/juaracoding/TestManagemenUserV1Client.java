@@ -43,12 +43,12 @@ public class TestManagemenUserV1Client {
     }
     @And("User masukan nama user")
     public void user_masukan_nama_user(){
-        managemenUserV1Client.setNamaUser("jiraiya");
+        managemenUserV1Client.setNamaUser("basuki");
         extentTest.log(LogStatus.PASS,"User masukan nama user");
     }
     @And("User masukan nama email")
     public void user_masukan_nama_email(){
-        managemenUserV1Client.setEmail("jiraiya22@gmail.com");
+        managemenUserV1Client.setEmail("basuka@gmail.com");
         extentTest.log(LogStatus.PASS,"User masukan nama email");
     }
     @And("User klik tombol simpan managemen V1")
@@ -92,14 +92,14 @@ public class TestManagemenUserV1Client {
 //Scenario: Menambahkan data user dengan nama user sama dan email berbeda==================================
     @And("User masukan nama email berbeda")
     public void user_masukan_nama_email_berbeda(){
-        managemenUserV1Client.setEmail("indahnya@gmail.com");
+        managemenUserV1Client.setEmail("barusanaja@gmail.com");
         extentTest.log(LogStatus.PASS,"User masukan nama email berbeda");
     }
 
 //Scenario: Menambahkan data user dengan nama berbeda dan email sama=====================================
     @And("User masukan nama user berbeda")
     public void user_masukan_nama_user_berbeda(){
-        managemenUserV1Client.setNamaUser("kapak");
+        managemenUserV1Client.setNamaUser("biasainaja");
         extentTest.log(LogStatus.PASS,"User masukan nama user berbeda");
     }
 }

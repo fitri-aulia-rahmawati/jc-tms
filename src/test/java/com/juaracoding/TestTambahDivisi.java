@@ -46,7 +46,7 @@ public class TestTambahDivisi {
     }
     @And("User mengubah isi teks")
     public void user_mengubah_isi_teks(){
-        tambahDivisi.renameDivisi("cerah");
+        tambahDivisi.renameDivisi("cukilat");
         extentTest.log(LogStatus.PASS,"User mengubah isi teks");
     }
     @And("User klik tombol update")
@@ -63,14 +63,14 @@ public class TestTambahDivisi {
     }
     @Then("Get text nama yang tak diubah")
     public void get_text_nama_yang_tak_diubah(){
-        Assert.assertEquals(tambahDivisi.getTextList(),"Bijaksanaan");
+        Assert.assertEquals(tambahDivisi.getTextList(),"niatan");
         extentTest.log(LogStatus.PASS,"Get text nama yang tak diubah");
     }
 
 //  Scenario: Menginputkan nama divisi baru==========================================================
     @When("User masukan nama divisi baru")
     public void user_masukan_nama_divisi_baru(){
-        tambahDivisi.inputNamaDivisi("bekas");
+        tambahDivisi.inputNamaDivisi("lampokpang");
         extentTest.log(LogStatus.PASS,"User masukan nama divisi baru");
     }
     @And("User klik tombol simpan")

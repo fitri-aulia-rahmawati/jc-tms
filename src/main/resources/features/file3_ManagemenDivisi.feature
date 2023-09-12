@@ -90,7 +90,7 @@ Feature: Managemen Divisi
   Scenario: Upload file sama tapi beda divisi
     When User klik upload data
     And User klik form nama divisi upload
-    And User pilih divisi upload
+    And User pilih divisi
     And User memilih file managemen divisi
     And User klik tombol save
     Then Get text notifikasi berhasil upload

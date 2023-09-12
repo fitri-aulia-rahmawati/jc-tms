@@ -52,7 +52,7 @@ public class TambahDivisi {
 //  Scenario: Membatalkan update======================================================================
     @FindBy(xpath ="//a[@class='btn btn-block btn-danger']")
     WebElement btnCancel;
-    @FindBy(xpath = "//td[normalize-space()='Bijaksanaan']")
+    @FindBy(xpath = "//td[normalize-space()='niatan']")
     WebElement textMamangoltakdiubah;
 
 
